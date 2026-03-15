@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html l
+ang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Kleber Morillo, programador, analista de sistemas y especialista en automatización con IA.">
+    <meta name="keywords" content="programador, analista de sistemas, automatización, IA, desarrollo web, portafolio, software">
+    <meta property="og:title" content="Portafolio de Kleber Morillo">
+    <meta property="og:description" content="Portafolio profesional de Kleber Morillo, programador y especialista en automatización con IA.">
+    <meta property="og:image" content="https://picsum.photos/seed/portfolio/1200/630.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusitio.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Portafolio de Kleber Morillo - Programador, Analista de Sistemas y Automatización con IA</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2a9d8f;
+            --secondary-color: #264653;
+            --accent-color: #e9c46a;
+            --background-color: #f4f4f4;
+            --font-family: 'Roboto', sans-serif;
+            --text-color: #264653;
+            --card-bg: #fff;
+        }
+        [data-theme="dark"] {
+            --primary-color: #4ecdc4;
+            --secondary-color: #1a1a2e;
+            --accent-color: #f9ca24;
+            --background-color: #16213e;
+            --text-color: #ddd;
+            --card-bg: #0f3460;
+        }
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            background: var(--background-color) url('https://via.placeholder.com/1920x1080/f4f4f4/cccccc?text=') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            animation: fadeIn 1s ease-in;
+            transition: background 0.3s, color 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #1a7a6b);
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://via.placeholder.com/1920x600/2a9d8f/ffffff?text=Fondo+Profesional') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            border-right: 2px solid var(--accent-color);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--accent-color); }
+        }
+        .theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        nav {
+            background: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            padding: 2rem;
+            animation: slideUp 0.8s ease-out;
+            transition: background 0.3s;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .service-item {
+            background: var(--card-bg) url('https://via.placeholder.com/250x150/f4a261/ffffff?text=Servicio') no-repeat center top;
+            background-size: cover;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+            color: #fff;
+            position: relative;
+        }
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 8px;
+            z-index: 1;
+        }
+        .service-item > * {
+            position: relative;
+            z-index: 2;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+        .service-item i {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        .service-item h3, .service-item p {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        #portafolio {
+            background: linear-gradient(135deg, var(--background-color), rgba(255,255,255,0.8));
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        .project {
+            display: flex;
+            margin-bottom: 2rem;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        .project img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .project:hover img {
+            transform: scale(1.05);
+        }
+        .project-content {
+            padding: 1rem;
+            flex: 1;
+        }
+        .project-content h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .skill {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .testimonials {
+            background: linear-gradient(135deg, rgba(233,196,106,0.18), rgba(255,255,255,0.7));
+            padding: 3rem 2rem;
+            border-radius: 14px;
+            margin-top: 2rem;
+            position: relative;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .testimonials::before {
+            content: '“';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 6rem;
+            color: rgba(233,196,106,0.35);
+            font-family: serif;
+            pointer-events: none;
+        }
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            padding: 1rem 0;
+        }
+        .testimonial-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(28px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            padding: 1.4rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        .testimonial-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+        }
+        .testimonial {
+            background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,255,255,0.8));
+            padding: 1.3rem 1.2rem;
+            border-radius: 14px;
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            width: 100%;
+        }
+        .testimonial:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+        }
+        .testimonial-img {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            object-fit: cover;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        .testimonial p {
+            font-style: italic;
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1.05rem;
+        }
+        .testimonial p::before,
+        .testimonial p::after {
+            content: '"';
+            font-size: 1.7rem;
+            color: var(--accent-color);
+            position: absolute;
+        }
+        .testimonial p::before {
+            left: 0;
+            top: -12px;
+        }
+        .testimonial p::after {
+            right: 0;
+            bottom: -12px;
+        }
+        .testimonial cite {
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        .testimonial-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 0.65rem;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 2;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .testimonial-nav:hover {
+            background: rgba(0,0,0,0.65);
+            transform: translateY(-50%) scale(1.05);
+        }
+        .testimonial-nav.prev {
+            left: 1.25rem;
+        }
+        .testimonial-nav.next {
+            right: 1.25rem;
+        }
+        .testimonial-controls {
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.65);
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .testimonial-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.25);
+        }
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), #1a7a6b);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .cta h2 {
+            margin-top: 0;
+            color: #fff;
+        }
+        .cta button {
+            background: #fff;
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .cta button:hover {
+            transform: scale(1.05);
+        }
+        .ai-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .ai-item {
+            background: var(--card-bg) url('https://via.placeholder.com/250x150/e76f51/ffffff?text=AI') no-repeat center top;
+            background-size: cover;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+            color: #fff;
+            position: relative;
+        }
+        .ai-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 8px;
+            z-index: 1;
+        }
+        .ai-item > * {
+            position: relative;
+            z-index: 2;
+        }
+        .ai-item:hover {
+            transform: translateY(-5px);
+        }
+        .ai-item i {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        .ai-item h3, .ai-item p {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        form label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        form input:focus, form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        .contact-container {
+            display: flex;
+            gap: 2rem;
+        }
+        .contact-info {
+            flex: 1;
+        }
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+        .about-content p {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-left: 5px solid var(--primary-color);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .about-content p:hover {
+            transform: translateX(5px);
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+                margin: 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .project {
+                flex-direction: column;
+            }
+            .project img {
+                width: 100%;
+                height: 150px;
+            }
+            .ai-examples {
+                grid-template-columns: 1fr;
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+        <img src="https://picsum.photos/seed/business/150/150.webp" alt="Foto de perfil de Kleber Morillo" class="profile-img">
+        <h1>Kleber Morillo</h1>
+        <p>Soy programador, analista de sistemas y especialista en automatización con IA</p>
+    </header>
+    <nav role="navigation" aria-label="Menú principal">
+        <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+        <a href="#habilidades"><i class="fas fa-star"></i> Habilidades</a>
+        <a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a>
+        <a href="#portafolio"><i class="fas fa-briefcase"></i> Portafolio</a>
+        <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+    <main role="main">
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="about-content">
+                <p><i class="fas fa-code"></i> Soy un programador y analista de sistemas con experiencia en el desarrollo de soluciones tecnológicas innovadoras, incluyendo automatización con IA.</p>
+                <p><i class="fas fa-heart"></i> Me apasiona crear aplicaciones web eficientes y atractivas, siempre enfocándome en la calidad, la experiencia del usuario y la optimización de procesos mediante inteligencia artificial.</p>
+            </div>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <p>Mi conjunto de habilidades incluye tecnologías modernas para el desarrollo web, análisis de sistemas y automatización con IA.</p>
+            <div class="skills">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Git</span>
+                <span class="skill">Responsive Design</span>
+                <span class="skill">UI/UX Design</span>
+                <span class="skill">Automatización con IA</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">APIs</span>
+            </div>
+        </section>
+        <section id="automatizacion-ia">
+            <h2>Automatización con IA</h2>
+            <p>Especializado en el uso de inteligencia artificial para automatizar procesos, optimizar flujos de trabajo y crear soluciones inteligentes. Utilizo herramientas como Python, TensorFlow y APIs de IA para desarrollar sistemas que aprenden y se adaptan.</p>
+            <div class="ai-examples">
+                <div class="ai-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Procesamiento de Datos Automatizado</h3>
+                    <p>Desarrollo scripts y modelos que procesan grandes volúmenes de datos de manera eficiente, reduciendo tiempo y errores humanos.</p>
+                </div>
+                <div class="ai-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Modelos de Machine Learning</h3>
+                    <p>Implemento algoritmos de aprendizaje automático para predicciones, clasificaciones y recomendaciones personalizadas.</p>
+                </div>
+                <div class="ai-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Integración de APIs de IA</h3>
+                    <p>Conecto aplicaciones con servicios de IA como OpenAI, Google AI o Azure Cognitive Services para funcionalidades avanzadas.</p>
+                </div>
+            </div>
+        </section>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="ai-examples">
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Programación Web</h3>
+                    <p>Desarrollo de aplicaciones web modernas con las últimas tecnologías.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>Diseño Web</h3>
+                    <p>Creación de interfaces de usuario intuitivas y atractivas.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Mantenimiento de Software</h3>
+                    <p>Soporte y actualización de sistemas existentes.</p>
+                </div>
+            </div>
+        </section>
+        <section id="portafolio">
+            <h2>Portafolio</h2>
+            <p>Esta página web fue creada por Kleber Morillo para mostrar mis habilidades en desarrollo web y automatización con IA.</p>
+            <div class="project">
+                <img src="https://picsum.photos/seed/web/300/200.webp" alt="Proyecto 1">
+                <div class="project-content">
+                    <h3>Proyecto 1: Aplicación Web Interactiva</h3>
+                    <p>Una aplicación web desarrollada con HTML, CSS y JavaScript, diseñada para ser responsive y de fácil uso. Su propósito fue demostrar mis habilidades en desarrollo front-end.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://picsum.photos/seed/ai/300/200.webp" alt="Proyecto 2">
+                <div class="project-content">
+                    <h3>Proyecto 2: Sistema de Gestión con IA</h3>
+                    <p>Un sistema de gestión desarrollado con tecnologías modernas y automatización con IA, enfocado en la eficiencia y la experiencia del usuario. Incluye modelos de machine learning para predicciones y optimización de procesos.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://picsum.photos/seed/ecommerce/300/200.webp" alt="Proyecto 3">
+                <div class="project-content">
+                    <h3>Proyecto 3: Plataforma E-commerce</h3>
+                    <p>Una tienda en línea completa con integración de pagos, gestión de inventario y recomendaciones personalizadas usando IA. Desarrollada con React y Node.js.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://picsum.photos/seed/automation/300/200.webp" alt="Proyecto 4">
+                <div class="project-content">
+                    <h3>Proyecto 4: Herramienta de Automatización</h3>
+                    <p>Un script de automatización que procesa datos masivos y genera reportes inteligentes. Utiliza Python y APIs de IA para análisis predictivo.</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonios">
+            <h2>Testimonios</h2>
+            <div class="testimonials testimonials-slider" role="region" aria-label="Testimonios de clientes">
+                <div class="decor-bg" aria-hidden="true"></div>
+                <button class="testimonial-nav prev" aria-label="Anterior testimonio">&larr;</button>
+                <button class="testimonial-nav next" aria-label="Siguiente testimonio">&rarr;</button>
+
+                <div class="testimonial testimonial-slide active" data-index="0" aria-live="polite">
+                    <img src="https://picsum.photos/seed/client1/80/80.webp" alt="Cliente 1" class="testimonial-img">
+                    <div>
+                        <div style="margin-bottom:0.5rem; font-size:1.2rem;">
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star-half-alt" style="color:var(--accent-color);"></i>
+                        </div>
+                        <p>
+                            Kleber es un profesional excepcional. Su trabajo en nuestro proyecto web superó todas las expectativas.
+                        </p>
+                        <cite>- Cliente Satisfecho</cite>
+                    </div>
+                </div>
+
+                <div class="testimonial testimonial-slide" data-index="1" aria-live="polite">
+                    <img src="https://picsum.photos/seed/client2/80/80.webp" alt="Cliente 2" class="testimonial-img">
+                    <div>
+                        <div style="margin-bottom:0.5rem; font-size:1.2rem;">
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                        </div>
+                        <p>
+                            Excelente analista de sistemas. Siempre entrega soluciones innovadoras y eficientes.
+                        </p>
+                        <cite>- Compañía Tech</cite>
+                    </div>
+                </div>
+
+                <div class="testimonial testimonial-slide" data-index="2" aria-live="polite">
+                    <img src="https://picsum.photos/seed/client3/80/80.webp" alt="Cliente 3" class="testimonial-img">
+                    <div>
+                        <div style="margin-bottom:0.5rem; font-size:1.2rem;">
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star-half-alt" style="color:var(--accent-color);"></i>
+                            <i class="far fa-star" style="color:var(--accent-color);"></i>
+                        </div>
+                        <p>
+                            Su expertise en automatización con IA transformó nuestros procesos. Altamente recomendado.
+                        </p>
+                        <cite>- Empresa Innovadora</cite>
+                    </div>
+                </div>
+
+                <div class="testimonial testimonial-slide" data-index="3" aria-live="polite">
+                    <img src="https://picsum.photos/seed/client4/80/80.webp" alt="Cliente 4" class="testimonial-img">
+                    <div>
+                        <div style="margin-bottom:0.5rem; font-size:1.2rem;">
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star-half-alt" style="color:var(--accent-color);"></i>
+                            <i class="far fa-star" style="color:var(--accent-color);"></i>
+                        </div>
+                        <p>
+                            La dedicación de Kleber en nuestro proyecto fue clave para el éxito. Su atención al detalle es admirable.
+                        </p>
+                        <cite>- Startup Digital</cite>
+                    </div>
+                </div>
+
+                <div class="testimonial testimonial-slide" data-index="4" aria-live="polite">
+                    <img src="https://picsum.photos/seed/client5/80/80.webp" alt="Cliente 5" class="testimonial-img">
+                    <div>
+                        <div style="margin-bottom:0.5rem; font-size:1.2rem;">
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star-half-alt" style="color:var(--accent-color);"></i>
+                        </div>
+                        <p>
+                            Recomiendo a Kleber por su profesionalismo y capacidad para resolver problemas complejos con soluciones creativas.
+                        </p>
+                        <cite>- Consultora TI</cite>
+                    </div>
+                </div>
+
+                <div class="testimonial testimonial-slide" data-index="5" aria-live="polite">
+                    <img src="https://picsum.photos/seed/client6/80/80.webp" alt="Cliente 6" class="testimonial-img">
+                    <div>
+                        <div style="margin-bottom:0.5rem; font-size:1.2rem;">
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                            <i class="fas fa-star" style="color:var(--accent-color);"></i>
+                        </div>
+                        <p>
+                            Trabajar con Kleber fue una experiencia excelente. Su conocimiento en IA nos ayudó a innovar.
+                        </p>
+                        <cite>- Empresa de Tecnología</cite>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls" aria-label="Controles de testimonios"></div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <form id="contactForm" aria-label="Formulario de contacto" action="https://formspree.io/f/maykzgrl" method="POST">
+                    <!-- Cambia el ID de Formspree por el tuyo en https://formspree.io -->
+                    <input type="text" name="_honey" style="display:none;" autocomplete="off" tabindex="-1">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="^\+?[0-9\s\-()]{7,}$" aria-describedby="telefonoHelp">
+                    <small id="telefonoHelp" style="display:block;color:rgba(0,0,0,0.6);font-size:0.85rem;">Incluye código de país si aplica.</small>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required aria-required="true">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true"></textarea>
+                    <button type="submit" style="background:linear-gradient(135deg, var(--primary-color), #1a7a6b);color:#fff;border:none;padding:0.75rem 2rem;border-radius:6px;font-size:1rem;cursor:pointer;transition:transform 0.2s;">Enviar <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="formSuccess" aria-live="polite" style="display:none;color:var(--primary-color);margin-top:1rem;font-weight:bold;"></div>
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-envelope"></i> klebermorillo10@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +58 4144463802</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="cta">
+            <h2>¿Listo para trabajar juntos?</h2>
+            <p>Contactame para discutir tu próximo proyecto.</p>
+            <button onclick="document.getElementById('contacto').scrollIntoView();">Contáctame</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kleber Morillo. Todos los derechos reservados. | <a href="mailto:klebermorillo10@gmail.com" style="color: var(--accent-color);">klebermorillo10@gmail.com</a> | <a href="#" style="color: var(--accent-color);">LinkedIn</a> | <a href="#" style="color: var(--accent-color);">GitHub</a></p>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const backToTop = document.getElementById('back-to-top');
+
+        themeToggle.addEventListener('click', () => {
+            body.dataset.theme = body.dataset.theme === 'dark' ? '' : 'dark';
+            themeToggle.innerHTML = body.dataset.theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', body.dataset.theme);
+        });
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            body.dataset.theme = 'dark';
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Back to top
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Testimonial slider
+        const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+        const dotsContainer = document.querySelector('.testimonial-controls');
+        const prevBtn = document.querySelector('.testimonial-nav.prev');
+        const nextBtn = document.querySelector('.testimonial-nav.next');
+        let currentSlideIndex = 0;
+        let slideInterval;
+
+        const updateSlides = (index) => {
+            slides.forEach((slide, i) => {
+                const isActive = i === index;
+                slide.classList.toggle('active', isActive);
+                slide.setAttribute('aria-hidden', !isActive);
+            });
+            if (dotsContainer) {
+                const dots = Array.from(dotsContainer.querySelectorAll('.testimonial-dot'));
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            }
+            currentSlideIndex = index;
+        };
+
+        const createDots = () => {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = slides
+                .map((_, idx) => `<span class="testimonial-dot${idx === 0 ? ' active' : ''}" role="button" tabindex="0" aria-label="Mostrar testimonio ${idx + 1}" data-index="${idx}"></span>`)
+                .join('');
+
+            dotsContainer.querySelectorAll('.testimonial-dot').forEach(dot => {
+                const index = Number(dot.dataset.index);
+                dot.addEventListener('click', () => {
+                    updateSlides(index);
+                    restartSlider();
+                });
+                dot.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        updateSlides(index);
+                        restartSlider();
+                    }
+                });
+            });
+        };
+
+        const nextSlide = () => updateSlides((currentSlideIndex + 1) % slides.length);
+        const prevSlide = () => updateSlides((currentSlideIndex - 1 + slides.length) % slides.length);
+        const startSlider = () => { slideInterval = setInterval(nextSlide, 8000); };
+        const stopSlider = () => { clearInterval(slideInterval); };
+        const restartSlider = () => { stopSlider(); startSlider(); };
+
+        if (slides.length) {
+            createDots();
+            updateSlides(0);
+            startSlider();
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); restartSlider(); });
+        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); restartSlider(); });
+
+        // Contact form functionality (Formspree + fallback to mailto)
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        const showFormMessage = (message, isError = false) => {
+            formSuccess.style.display = 'block';
+            formSuccess.style.color = isError ? '#e63946' : 'var(--primary-color)';
+            formSuccess.textContent = message;
+            if (!isError) {
+                setTimeout(() => { formSuccess.style.display = 'none'; }, 6000);
+            }
+        };
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const honeypot = contactForm.querySelector('[name="_honey"]').value;
+            if (honeypot) return; // spam trap
+
+            const formData = new FormData(contactForm);
+            const phone = formData.get('telefono')?.toString().trim();
+            const phonePattern = /^\+?[0-9\s\-()]{7,}$/;
+            if (phone && !phonePattern.test(phone)) {
+                showFormMessage('El teléfono no tiene un formato válido.', true);
+                return;
+            }
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Enviando...';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showFormMessage('¡Gracias! Tu mensaje ha sido enviado.');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Error al enviar');
+                }
+            } catch (err) {
+                showFormMessage('No se pudo enviar el formulario. Se abrirá tu correo como respaldo.', true);
+                const nombre = formData.get('nombre');
+                const email = formData.get('email');
+                const asunto = formData.get('asunto');
+                const mensaje = formData.get('mensaje');
+                const mailto = `mailto:klebermorillo10@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent('Nombre: ' + nombre + '\nEmail: ' + email + '\nTeléfono: ' + phone + '\n\nMensaje: ' + mensaje)}`;
+                setTimeout(() => { window.location.href = mailto; }, 1800);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+            }
+        });
+    </script>
